@@ -9,7 +9,7 @@ describe('core-js-numbers', () => {
   });
 
   it.optional(
-    'getCircleCircumference should return a circumference of circle',
+    'ircleCircumference should return a circumference of circle',
     () => {
       assert.equal(tasks.getCircleCircumference(5), 31.41592653589793);
       assert.equal(tasks.getCircleCircumference(3.14), 19.729201864543903);
