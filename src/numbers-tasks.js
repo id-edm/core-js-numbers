@@ -253,8 +253,15 @@ function getCube(num) {
  *   3  => 2
  *   10 => 55
  */
-function getFibonacciNumber(/* index */) {
-  throw new Error('Not implemented');
+function getFibonacciNumber(index) {
+  let f1 = 0;
+  let f2 = 1;
+  for (let i = 0; i < index; i += 1) {
+    const f3 = f2;
+    f2 = f1 + f2;
+    f1 = f3;
+  }
+  return f1;
 }
 
 /**
@@ -610,8 +617,8 @@ function getHypotenuse(a, b) {
  * 10 => 5
  * 15 => 8
  */
-function getCountOfOddNumbers(/* number */) {
-  throw new Error('Not implemented');
+function getCountOfOddNumbers(number) {
+  return Math.ceil(Math.abs(number) / 2);
 }
 
 module.exports = {
